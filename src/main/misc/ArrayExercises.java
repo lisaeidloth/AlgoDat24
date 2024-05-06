@@ -1,3 +1,5 @@
+package main.misc;
+
 import java.util.Arrays;
 
 // a small warmup

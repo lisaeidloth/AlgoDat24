@@ -1,3 +1,5 @@
+package main.sort;
+
 import java.util.Arrays;
 
 public class InsertionSort {
