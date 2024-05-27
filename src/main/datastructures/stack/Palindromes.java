@@ -1,6 +1,5 @@
-package main.misc;
+package main.datastructures.stack;
 
-import java.util.Deque;
 import java.util.List;
 import java.util.Stack;
 
