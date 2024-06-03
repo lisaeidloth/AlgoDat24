@@ -1,6 +1,8 @@
 package main.datastructures.lists;
 
-public class LinkedList {
+import main.datastructures.stack.MyStack;
+
+public class LinkedList implements MyStack {
     private Node head;
 
     public void insert(String data) {
@@ -19,6 +21,7 @@ public class LinkedList {
             // ansonsten iteriere zu Position,
             // starte bei head
         else {
+            // wenn i++ (siehe unten) verwendet, dann hier bei i = 1 starten
             int i = 0;
             Node current = head;
             while (current.next != null && ++i < pos) {
@@ -76,6 +79,16 @@ public class LinkedList {
 
     public boolean isFull() {
         return false;
+    }
+
+    @Override
+    public void push(String elem) {
+        insert(elem, 0);
+    }
+
+    @Override
+    public String pop() {
+        return delete(0);
     }
 
     public boolean isEmpty() {
