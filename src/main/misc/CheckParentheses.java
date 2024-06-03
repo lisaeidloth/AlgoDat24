@@ -29,7 +29,7 @@ public class CheckParentheses {
                 String lastParen = stack.pop();
                 boolean valid = lastParen != null && parenMatch.get(lastParen).equals(character);
                 if (!valid) {
-                    System.out.println("Not valid.");
+                    System.out.println("Not valid. Expected '" + (lastParen == null? "<nothing>" : parenMatch.get(lastParen)) + "' but got " + character + "' at position " + i);
                     return;
                 }
             }
